@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.37); /* Black with transparency */
+    padding: 10px 20px;
+    border-radius: 50px; /* Rounded edges */
+    box-shadow: 0 0 10px rgb(255, 255, 255); /* Glow effect */
+    margin: 30px;
+  }
+  
+  /* Logo */
+  .logo img {
+    height: 40px; /* Adjust based on your logo size */
+    width: 60px;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Space between links */
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffffff; /* Change color on hover */
+    text-shadow: 0 0 10px #ffffff; /* Glow effect on hover */
+  }
+
+  body {
+    background-image: url('webbg.jpg'); /* path to your image */
+    background-size: cover; /* Makes the image cover the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Ensures the body covers the whole viewport height */
+    margin: 0; /* Removes default margin */
+  }
+  
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.outline {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+
+.subtext {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.subtext p {
+    font-size: 1rem;
+    max-width: 300px;
+}
+
+.circle-button {
+    width: 80px;
+    height: 80px;
+    border: 3px solid white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 10px;
+    cursor: pointer;
+}
