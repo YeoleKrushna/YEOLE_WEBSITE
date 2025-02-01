@@ -13,9 +13,10 @@
     </div>
     <ul class="nav-links">
       <li><a href="#">HOME</a></li>
-      <li><a href="#">WORK</a></li>
-      <li><a href="#">SERVICES</a></li>
-      <li><a href="ContactUs.html">Contact Us</a></li>
+      <li><a href="work.html">WORK</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="ContactUs.html">CONTACT</a></li>
     </ul>
   </nav>
 
@@ -23,25 +24,14 @@
     <h1><span class="outline">CREATIVE</span> <br> SPACE</h1>
     <div class="subtext">
         <p>We Create Immersive Experiences That Ignite New Perspectives.</p>
-        <div class="circle-button">↓ <br> WORK</div>
+        <div class="work_animation">
+          <a href="work.html">
+          <img src = "images/workpng.png" alt="">
+        </a>
+        </div>
         <p>Enhancing Excellence And Driving Meaningful Change.</p>
     </div>
   </section>
 
-
-  <script>
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    // Check if the link is an internal link (i.e., starts with #)
-    if (this.getAttribute('href').startsWith('#')) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-    // If it's not an internal link, allow normal navigation
-  });
-});
-  </script>
 </body>
 </html>

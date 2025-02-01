@@ -1,59 +1,85 @@
-/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  
-  /* Navigation Bar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.37); /* Black with transparency */
-    padding: 10px 20px;
-    border-radius: 50px; /* Rounded edges */
-    box-shadow: 0 0 10px rgb(255, 255, 255); /* Glow effect */
-    margin: 30px;
-  }
-  
-  /* Logo */
-  .logo img {
-    height: 40px; /* Adjust based on your logo size */
-    width: 60px;
-  }
-  
-  /* Navigation Links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px; /* Space between links */
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
-    color: #ffffff; /* Change color on hover */
-    text-shadow: 0 0 10px #ffffff; /* Glow effect on hover */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding-top: 70px; /* Prevent content from being hidden behind fixed navbar */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.37); /* Black with transparency */
+  padding: 10px 20px;
+  border-radius: 50px; /* Rounded edges */
+  box-shadow: 0 0 1px rgb(255, 255, 255); /* Glow effect */
+  position: fixed;
+  top: 30px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Offset to center */
+  height: 60px;
+  width: 900px;
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* Logo */
+.logo img {
+  height: 100px; /* Adjust based on your logo size */
+  width: 200px;
+  align-self: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Space between links */
+}
+
+/* Links inside navbar */
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffffff; /* Change color on hover */
+  text-shadow: 0 0 10px #ffffff; /* Glow effect on hover */
+}
+
+/* Optional: Buttons in the navbar (if any) */
+.navbar button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: white;
+  color: black;
+}
 
   body {
     background-image: url('images/webbg.jpg'); /* path to your image */
     background-size: cover; /* Makes the image cover the entire background */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 100vh; /* Ensures the body covers the whole viewport height */
+    height: 200vh; /* Ensures the body covers the whole viewport height */
     margin: 0; /* Removes default margin */
   }
   
@@ -63,7 +89,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Anton', sans-serif;
-    background: black;
     color: white;
     text-align: center;
 }
@@ -73,7 +98,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
     top: 0;
@@ -85,12 +109,12 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 110vh;
     text-transform: uppercase;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 10rem;
     margin: 0;
 }
 
@@ -107,19 +131,59 @@ h1 {
 }
 
 .subtext p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     max-width: 300px;
 }
 
+.work_animation {
+  position: absolute;
+  left: 47%;
+  bottom: 65px;
+  z-index: 10;
+  width: 125px;
+  height: 125px;
+  cursor: pointer;
+  /* Adding animation here */
+  -webkit-animation: icon-bounce 0.8s ease-out infinite;  /* For Webkit browsers (Safari, etc.) */
+  animation: icon-bounce 0.8s ease-out infinite;  /* Standard syntax */
+}
+
+/* Define the bounce animation */
+@keyframes icon-bounce {
+  0% {
+      transform: translateY(0); /* Initial position */
+  }
+  50% {
+      transform: translateY(-20px); /* Move up */
+  }
+  100% {
+      transform: translateY(0); /* Return to initial position */
+  }
+}
+
+@-webkit-keyframes icon-bounce {
+  0% {
+      -webkit-transform: translateY(0);
+  }
+  50% {
+      -webkit-transform: translateY(-20px);
+  }
+  100% {
+      -webkit-transform: translateY(0);
+  }
+}
+
+
 .circle-button {
-    width: 80px;
-    height: 80px;
-    border: 3px solid white;
+    width: 100px;
+    height: 100px;
+    border: 4px solid white;
     border-radius: 50%;
     text-align: center;
-    font-size: 1rem;
-    padding-top: 10px;
+    font-size: 1.5rem;
+    padding-top: 17px;
     cursor: pointer;
+    
 }
 
 /* Login Page */
