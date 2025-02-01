@@ -9,13 +9,13 @@
 <body>
   <nav class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="Website Logo">
+      <img src="images/logo.png" alt="Website Logo">
     </div>
     <ul class="nav-links">
       <li><a href="#">HOME</a></li>
       <li><a href="#">WORK</a></li>
       <li><a href="#">SERVICES</a></li>
-      <li><a href="#">CONTACT</a></li>
+      <li><a href="ContactUs.html">Contact Us</a></li>
     </ul>
   </nav>
 
@@ -26,18 +26,22 @@
         <div class="circle-button">↓ <br> WORK</div>
         <p>Enhancing Excellence And Driving Meaningful Change.</p>
     </div>
- </section>
+  </section>
 
 
   <script>
     document.querySelectorAll('.nav-links a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+  anchor.addEventListener('click', function (e) {
+    // Check if the link is an internal link (i.e., starts with #)
+    if (this.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
       });
-    });
+    }
+    // If it's not an internal link, allow normal navigation
+  });
+});
   </script>
 </body>
 </html>

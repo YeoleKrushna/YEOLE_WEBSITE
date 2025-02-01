@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>YEOLE Contact Page | coding.pixel</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<section>
+		<div class="leaves">
+			<div class="set">
+				<div><img src="images/leaf_01.png"></div>
+				<div><img src="images/leaf_02.png"></div>
+				<div><img src="images/leaf_03.png"></div>
+				<div><img src="images/leaf_04.png"></div>
+				<div><img src="images/leaf_01.png"></div>
+				<div><img src="images/leaf_02.png"></div>
+				<div><img src="images/leaf_03.png"></div>
+				<div><img src="images/leaf_04.png"></div>
+			</div>
+		</div>
+		<img src="images/bg.jpg" class="bg">
+		<img src="images/girl.png" class="girl">
+		<img src="images/trees.png" class="trees">
+		<div class="contactus">
+			<h2>Contact Us</h2>
+			<form id="contact-form">
+				<div class="inputBox">
+					<input type="text" id="name" placeholder="Your Name" required>
+				</div>
+				<div class="inputBox">
+					<input type="email" id="email" placeholder="Your Email" required>
+				</div>
+				<div class="inputBox">
+					<input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
+				</div>
+				<div class="inputBox">
+					<input type="text" id="description" placeholder="Description" required>
+				</div>
+				<div class="inputBox">
+					<input type="submit" value="Submit" id="btn">
+				</div>
+			</form>
+			<p id="message" style="display:none;">Thank you for contacting us. Our team will contact you soon.</p>
+			
+			<script>
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
+					// Check if all required fields are filled
+					var name = document.getElementById('name').value;
+					var email = document.getElementById('email').value;
+					var phone = document.getElementById('phone').value;
+					var description = document.getElementById('description').value;
+
+					if (name === '' || email === '' || phone === '' || description === '') {
+						event.preventDefault(); // Prevent form submission
+						alert('Please fill out all fields.');
+					} else {
+						document.getElementById('message').style.display = 'block'; // Show the success message
+						event.preventDefault(); // Prevent form submission for demonstration
+					}
+				});
+			</script>
+		</div>
+	</section>
+</body>
+</html>
