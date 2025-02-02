@@ -1,2 +1,0 @@
-# YEOLE
-Web Services Website

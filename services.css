@@ -13,25 +13,13 @@
 }
 
 body{
-    background: #171f2b;
+    background: #000000;
     min-height: 100vh;
     overflow: hidden;
     transition: var(--all-transition);
 }
 
-body::before{
-    content: '';
-    position: absolute;
-    left: 3.5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 700px;
-    height: 700px;
-    background: rgba(255,255,255,.8);
-    border-radius: 50%;
-    filter: blur(200px);
 
-}
 
 .img-box{
     left: -60%;
@@ -75,7 +63,7 @@ body::before{
 
 .img-item .item img{
     transform:  rotate(calc(360deg / 6 * var(--i))) rotate(120deg);
-    filter: blur(8px);
+    filter: blur(100px);
     transition: var(--all-transition);
 }
 
@@ -111,7 +99,7 @@ body::before{
 .info-box .info-item.active{
     transform: translateX(0);
     opacity: 1;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.673);
+    box-shadow: 0 0 10px rgb(255, 252, 252);
 }
 
 .info-item h2{

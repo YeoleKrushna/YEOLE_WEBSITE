@@ -1,43 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('images/webbg.jpg');
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .coming-soon {
-            text-align: center;
-            background-color: #242424;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .coming-soon h1 {
-            color: #ffffff;
-            font-size: 36px;
-        }
-
-        .coming-soon p {
-            color: #ffffff;
-            font-size: 18px;
-        }
-    </style>
+    <title>Animated Product Slider | coding.pixel</title>
+    <link rel="stylesheet" href="services.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    <div class="coming-soon">
-        <h1>Coming Soon</h1>
-        <p>Stay tuned for something amazing!</p>
+
+    <div class="carousel">
+        <div class="img-box">
+            <div class="img-list">
+                <div class="img-slider">
+                    <div class="img-item active" style="--i:1;">
+                        <div class="item">
+                            <img src="images/services/videoediting-01.png">
+                        </div>
+                    </div>
+                    <div class="img-item" style="--i:2;">
+                        <div class="item">
+                            <a href="logowork.html">
+                            <img src="images/services/logodesign-01.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-item" style="--i:3;">
+                        <div class="item">
+                            <img src="images/services/shortvid-01.png">
+                        </div>
+                    </div>
+                    <div class="img-item" style="--i:4;">
+                        <div class="item">
+                            <img src="images/services/webdev-01.png">
+                        </div>
+                    </div>
+                    <div class="img-item" style="--i:5;">
+                        <div class="item">
+                            <img src="images/services/socialmed-01.png">
+                        </div>
+                    </div>
+                    <div class="img-item" style="--i:6;">
+                        <div class="item">
+                            <img src="images/services/consult-01.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-item active">
+                <h1>VIDEO EDITING</h1>
+                <p>Our video editing service provides high-quality, professional edits tailored to your vision. From corporate videos to personal projects, we enhance your content by refining visuals, sound, and pacing to engage your audience and deliver the message effectively.</p>
+                <a href="vidework.html" class="btn">See Work</a>
+            </div>
+
+            <div class="info-item">
+                <h2>LOGO DESIGNING</h2>
+                
+                <p>A strong brand begins with a memorable logo. Our logo design service focuses on creating unique, timeless, and visually impactful logos that resonate with your target audience. We ensure that each logo reflects your brand’s values</p>
+                <a href="logowork.html" class="btn">See Work</a>
+            </div>
+
+            <div class="info-item">
+                <h2>SHORT VIDEOS</h2>
+                
+                <p>In today’s digital landscape, short-form content is king. We specialize in editing high-impact, attention-grabbing short videos for platforms like TikTok, Instagram, and YouTube Shorts. Our editing process is quick and efficient, delivering polished content that enhances your online presence and drives engagement with your audience.</p>
+                <a href="shortvidwork.html" class="btn">See Work</a>
+            </div>
+
+
+            <div class="info-item">
+                <h2>WEBSITE DEVELOPEMENT</h2>
+                
+                <p>A strong online presence starts with a functional, visually appealing website. Our web development service provides custom-built websites that are user-friendly, mobile-optimized, and designed to convert visitors into customers. Whether you need a simple landing page or a complex e-commerce site, we deliver scalable and secure web solutions tailored to your business needs.</p>
+                <a href="#" class="btn">See Work</a>
+            </div>
+
+            <div class="info-item">
+                <h2>SOCIAL MEDIA</h2>
+                
+                <p>We help startups, businesses, and creators establish and grow their online presence. Our social media management service includes account setup, strategy development, content creation, and daily management, all aimed at increasing visibility and engagement. We design campaigns tailored to your goals, ensuring sustained growth and meaningful connections with your audience.</p>
+                <a href="socialmedia.html" class="btn">See Work</a>
+            </div>
+
+            <div class="info-item">
+                <h2>CONSULTATION</h2>
+                
+                <p>Our consultation services empower you with the knowledge and strategies needed to succeed in the digital space. We provide expert advice on growing your business and social media presence, whether you're a startup, business owner, or creator. From boosting sales to increasing followers, we guide you through actionable strategies to achieve measurable growth and long-term success.</p>
+                <a href="consultation.html" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <span class="prev-btn">
+                <i class="bx bx-chevron-left"></i>
+            </span>
+            <span class="next-btn">
+                <i class="bx bx-chevron-right"></i>
+            </span>
+        </div>
+
     </div>
+
+
+
+    <script src="services.js"></script>
 </body>
+
 </html>

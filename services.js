@@ -6,7 +6,7 @@ const infoItems = document.querySelectorAll('.info-item');
 const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
 
-let colors = ['#171f2b','#171f2b','#171f2b','#171f2b','#171f2b','#171f2b']
+let colors = ['#000000','#000000','#000000','#000000','#000000','#000000']
 let indexSlider = 0;
 let index = 0;
 

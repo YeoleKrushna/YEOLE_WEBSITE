@@ -263,3 +263,56 @@ section {
   overflow: hidden;
 }
 
+
+
+/* Animation for CREATIVE (coming from the left) */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for SPACE (coming from the right) */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Apply animations to the spans */
+.creative {
+  display: inline-block;
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.space {
+  display: inline-block;
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+/* Existing styles */
+h1 {
+  font-size: 10rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
