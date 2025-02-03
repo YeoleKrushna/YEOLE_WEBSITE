@@ -14,107 +14,93 @@
     </div>
     <ul class="nav-links">
       <li><a href="#">HOME</a></li>
-      <li><a href="#workSection">WORK</a></li>
-      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="work.html">WORK</a></li>
+      <li><a href="#ServiceSection">SERVICES</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="ContactUs.html">CONTACT</a></li>
     </ul>
   </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>
-        <span class="outline creative">CREATIVE</span> <br>
-        <span class="space">SPACE</span>
-      </h1>
-      <div class="subtext">
-        <p></p>
-        <div class="work_animation">
-          <a href="work.html">
-            <img src="images/workpng.png" alt="">
-          </a>
-        </div>
-        <p></p>
+  <!-- Hero Section (Home Page) -->
+  <section class="hero">
+    <h1>
+      <span class="outline creative">CREATIVE</span> <br>
+      <span class="space">SPACE</span>
+    </h1>
+    <div class="subtext">
+      <div class="work_animation">
+        <a href="work.html">
+          <img src="images/workpng.png" alt="Work Link">
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
   
-    <!-- New Work Section -->
-
-    <section class="work" id="workSection">
-      <h1 class="space1">OUR WORK</h1> <!-- Heading stays at the top -->
-      <div class="container">
-        <!-- Work Boxes -->
-        <div class="box" onclick="redirectTo('videowork.html')">
-          <span>VIDEO EDITING</span>
-        </div>
-        <div class="box" onclick="redirectTo('logowork.html')">
-          <span>LOGO DESIGNING</span>
-        </div>
-        <div class="box" onclick="redirectTo('videowork.html')">
-          <span>SHORT VIDEOS</span>
-        </div>
-        <div class="box" onclick="redirectTo('videowork.html')">
-          <span>WEB DEVELOPMENT</span>
-        </div>
-        <div class="box" onclick="redirectTo('videowork.html')">
-          <span>SOCIAL MEDIA</span>
-        </div>
-        <div class="box" onclick="redirectTo('videowork.html')">
-          <span>CONSULTATION</span>
-        </div>
+  <!-- Service Section -->
+  <section class="work" id="ServiceSection">
+    <br><span class="space1">OUR</span></br>
+    <h1 class="space2" > SERVICES.</h1>
+    <div class="container">
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>VIDEO EDITING</span>
       </div>
-    </section>
-    
-  
+      <div class="box" onclick="redirectTo('logowork.html')">
+        <span>LOGO DESIGNING</span>
+      </div>
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>SHORT VIDEOS</span>
+      </div>
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>WEB DEVELOPMENT</span>
+      </div>
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>SOCIAL MEDIA</span>
+      </div>
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>CONSULTATION</span>
+      </div>
+    </div>
+  </section>
 
-  <!-- JavaScript -->
   <script>
-    let lastScrollTop = 0; // Keeps track of the last scroll position
+    let lastScrollTop = 0;
     let navbar = document.getElementById('navbar');
 
-    // Function to handle scroll events
     window.addEventListener('scroll', function() {
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
       if (currentScroll > lastScrollTop) {
-        // Scrolling down, hide navbar
         navbar.classList.add('hidden');
       } else {
-        // Scrolling up, show navbar
         navbar.classList.remove('hidden');
       }
-
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
+
     window.addEventListener('mousemove', function(event) {
       if (event.clientY <= 10) {
         navbar.classList.remove('hidden');
       }
     });
+
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+
+    window.onload = function() {
+      const ServiceSection = document.getElementById('ServiceSection');
+      const container = document.querySelector('.container');
+      
+      setTimeout(() => {
+        ServiceSection.classList.add('visible'); 
+        container.classList.add('visible');  
+      }, 500);
+    };
+
+    document.querySelector('.nav-links li a[href="#ServiceSection"]').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('ServiceSection').scrollIntoView({ behavior: 'smooth' });
+    });
   </script>
 
-  
-<script>
-  function redirectTo(page) {
-    window.location.href = page;
-  }
-  window.onload = function() {
-    const workSection = document.getElementById('workSection');
-    const container = document.querySelector('.container');
-    
-    setTimeout(() => {
-      workSection.classList.add('visible'); 
-      container.classList.add('visible');  
-    }, 500); 
-  };
-
-  
-  document.querySelector('.nav-links li a[href="#workSection"]').addEventListener('click', function(e) {
-    e.preventDefault(); 
-    document.getElementById('workSection').scrollIntoView({ behavior: 'smooth' }); 
-  });
-</script>
-
-  
 </body>
 </html>
