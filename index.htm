@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navigation Bar</title>
+  <title>YEOLE</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,28 +14,58 @@
     </div>
     <ul class="nav-links">
       <li><a href="#">HOME</a></li>
-      <li><a href="work.html">WORK</a></li>
+      <li><a href="#workSection">WORK</a></li>
       <li><a href="services.html">SERVICES</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="ContactUs.html">CONTACT</a></li>
     </ul>
   </nav>
 
-  <section class="hero">
-    <h1>
-      <span class="outline creative">CREATIVE</span> <br>
-      <span class="space">SPACE</span>
-    </h1>
-    <div class="subtext">
-      <p></p>
-      <div class="work_animation">
-        <a href="work.html">
-          <img src="images/workpng.png" alt="">
-        </a>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>
+        <span class="outline creative">CREATIVE</span> <br>
+        <span class="space">SPACE</span>
+      </h1>
+      <div class="subtext">
+        <p></p>
+        <div class="work_animation">
+          <a href="work.html">
+            <img src="images/workpng.png" alt="">
+          </a>
+        </div>
+        <p></p>
       </div>
-      <p></p>
-    </div>
-  </section>
+    </section>
+  
+    <!-- New Work Section -->
+
+    <section class="work" id="workSection">
+      <h1 class="space1">OUR WORK</h1> <!-- Heading stays at the top -->
+      <div class="container">
+        <!-- Work Boxes -->
+        <div class="box" onclick="redirectTo('videowork.html')">
+          <span>VIDEO EDITING</span>
+        </div>
+        <div class="box" onclick="redirectTo('logowork.html')">
+          <span>LOGO DESIGNING</span>
+        </div>
+        <div class="box" onclick="redirectTo('videowork.html')">
+          <span>SHORT VIDEOS</span>
+        </div>
+        <div class="box" onclick="redirectTo('videowork.html')">
+          <span>WEB DEVELOPMENT</span>
+        </div>
+        <div class="box" onclick="redirectTo('videowork.html')">
+          <span>SOCIAL MEDIA</span>
+        </div>
+        <div class="box" onclick="redirectTo('videowork.html')">
+          <span>CONSULTATION</span>
+        </div>
+      </div>
+    </section>
+    
+  
 
   <!-- JavaScript -->
   <script>
@@ -54,16 +84,37 @@
         navbar.classList.remove('hidden');
       }
 
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scroll value
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
-
-    // Function to show navbar when cursor moves to the top
     window.addEventListener('mousemove', function(event) {
       if (event.clientY <= 10) {
-        navbar.classList.remove('hidden'); // Show navbar when cursor is near top
+        navbar.classList.remove('hidden');
       }
     });
   </script>
+
+  
+<script>
+  function redirectTo(page) {
+    window.location.href = page;
+  }
+  window.onload = function() {
+    const workSection = document.getElementById('workSection');
+    const container = document.querySelector('.container');
+    
+    setTimeout(() => {
+      workSection.classList.add('visible'); 
+      container.classList.add('visible');  
+    }, 500); 
+  };
+
+  
+  document.querySelector('.nav-links li a[href="#workSection"]').addEventListener('click', function(e) {
+    e.preventDefault(); 
+    document.getElementById('workSection').scrollIntoView({ behavior: 'smooth' }); 
+  });
+</script>
+
   
 </body>
 </html>

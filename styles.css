@@ -7,49 +7,48 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  padding-top: 70px; /* Prevent content from being hidden behind fixed navbar */
+  padding-top: 70px; 
 }
 
-/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.37); /* Black with transparency */
+  background-color: rgba(0, 0, 0, 0.37);
   padding: 10px 20px;
-  border-radius: 50px; /* Rounded edges */
+  border-radius: 50px;
   box-shadow: 0 0 1px rgb(255, 255, 255); /* Glow effect */
   position: fixed;
-  top: 30px; /* Default position */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Offset to center */
+  top: 30px;
+  left: 50%; 
+  transform: translateX(-50%); 
   height: 60px;
   width: 900px;
-  z-index: 1000; /* Ensure it's on top of other content */
-  transition: top 0.3s; /* Smooth transition for hiding/showing */
+  z-index: 1000;
+  transition: top 0.3s;
 }
 
-/* Hidden navbar (when scrolling down) */
+
 .navbar.hidden {
-  top: -70px; /* Moves the navbar up off-screen */
+  top: -70px; 
 }
 
-/* Logo */
+
 .logo img {
-  height: 100px; /* Adjust based on your logo size */
+  height: 100px; 
   width: 200px;
   align-self: auto;
 }
 
-/* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px; /* Space between links */
+  gap: 25px;
 }
 
-/* Links inside navbar */
+
 .nav-links li a {
   text-decoration: none;
   color: white;
@@ -70,7 +69,7 @@ body {
   height: 0;
   background-color: black;
   border: 1px solid white;
-  border-radius: 50px; /* Rounded edges for the box */
+  border-radius: 50px; 
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.3s ease;
@@ -83,7 +82,7 @@ body {
   opacity: 1;
 }
 
-/* Glow effect */
+
 .nav-links li a::after {
   content: '';
   position: absolute;
@@ -92,7 +91,7 @@ body {
   width: 100%;
   height: 100%;
   border: 0.1px solid white;
-  border-radius: 50px; /* Rounded edges for the glow */
+  border-radius: 50px; 
   transform: translate(-50%, -50%);
   opacity: 0;
   box-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white;
@@ -116,7 +115,7 @@ body {
   }
 }
 
-/* Optional: Buttons in the navbar (if any) */
+
 .navbar button {
   background-color: transparent;
   color: white;
@@ -134,12 +133,12 @@ body {
 }
 
   body {
-    background-color: #000000;; /* path to your image */
-    background-size: cover; /* Makes the image cover the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 200vh; /* Ensures the body covers the whole viewport height */
-    margin: 0; /* Removes default margin */
+    background-color: #000000;; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 200vh;
+    margin: 0; 
   }
   
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
@@ -203,8 +202,8 @@ h1 {
   height: 125px;
   cursor: pointer;
   /* Adding animation here */
-  -webkit-animation: icon-bounce 0.8s ease-out infinite;  /* For Webkit browsers (Safari, etc.) */
-  animation: icon-bounce 0.8s ease-out infinite;  /* Standard syntax */
+  -webkit-animation: icon-bounce 0.8s ease-out infinite; 
+  animation: icon-bounce 0.8s ease-out infinite;  
 }
 
 /* Define the bounce animation */
@@ -316,3 +315,108 @@ h1 {
   -webkit-text-stroke: 2px white;
 }
 
+
+
+
+
+
+/* WORK SECTION CSS */
+
+.work {
+  position: relative;
+  padding: 50px 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Start from below */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.work.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.space1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 5rem; 
+  font-weight: bold;
+}
+
+
+.container {
+  display: grid;
+  margin-top: 20px;  
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  max-width: 900px;
+  margin: 0 auto; 
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.box {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background: rgb(0, 0, 0); /* Glassy effect */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; 
+  transform: translateY(50px); 
+}
+
+.box:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
+}
+
+
+.box span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation for boxes when page loads */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.box {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.box:nth-child(1) { animation-delay: 0.2s; }
+.box:nth-child(2) { animation-delay: 0.5s; }
+.box:nth-child(3) { animation-delay: 0.7s; }
+.box:nth-child(4) { animation-delay: 0.9s; }
+.box:nth-child(5) { animation-delay: 1s; }
+.box:nth-child(6) { animation-delay: 1.1s; }
