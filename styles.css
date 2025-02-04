@@ -133,7 +133,8 @@ body {
 }
 
   body {
-    background-color: #000000;; 
+    background: linear-gradient(245.69deg, #070707 10%, #121212 28.53%, #1d1c1c 75.52%);
+ 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -325,7 +326,7 @@ h1 {
 .work {
   position: relative;
   padding: 50px 50px;
-  background-color: rgb(10, 10, 10);
+  background: linear-gradient(245.69deg, #070707 10%, #121212 28.53%, #1d1c1c 75.52%);
   color: white;
   text-align: center;
   opacity: 0; /* Initially hidden */
