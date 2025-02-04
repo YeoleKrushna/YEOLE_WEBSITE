@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YEOLE</title>
+  <link rel="stylesheet" href="index1.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+   />
+
+</head>
+<body>
+    <header>
+        <a class="logo"><img src="images/logo.png" alt="Website Logo"></a>
+
+        <ul class="nav-list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="work.html">WORK</a></li>
+            <li><a href="#ServiceSection">SERVICES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="ContactUs.html">CONTACT</a></li>
+          </ul>
+
+        <div class="bx bx-menu" id="menu-icon"> </div>
+        <div class="blur-overlay" id="blur-overlay"></div>
+    </header>
+
+    <div class="icons">
+        <a href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-youtube-line"></i></a>
+        <a href="#"><i class="ri-mail-line"></i></a>
+    </div>
+    
+
+    
+
+  
+
+  <!-- Hero Section (Home Page) -->
+  <section class="hero">
+    <h1>
+      <span class="outline creative">CREATIVE</span> <br>
+      <span class="space">SPACE</span>
+    </h1>
+    <div class="subtext">
+      <div class="work_animation">
+        <a href="work.html">
+          <img src="images/workpng.png" alt="Work Link">
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Service Section -->
+  <section class="work" id="ServiceSection">
+    <br><span class="space1">OUR</span></br>
+    <h1 class="space2" > SERVICES.</h1>
+    <div class="container">
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>VIDEO EDITING</span>
+      </div>
+      <div class="box" onclick="redirectTo('logowork.html')">
+        <span>LOGO DESIGNING</span>
+      </div>
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>SHORT VIDEOS</span>
+      </div>
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>WEB DEVELOPMENT</span>
+      </div>
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>SOCIAL MEDIA</span>
+      </div>
+      <div class="box" onclick="redirectTo('videowork.html')">
+        <span>CONSULTATION</span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header');
+    let lastScrollTop = 0;
+
+    // Hide/show header on scroll
+    window.addEventListener('scroll', function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            header.classList.add('hidden');
+        } else {
+            // Scrolling up
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
+    // Show header when mouse is near the top of the page
+    window.addEventListener('mousemove', function (event) {
+        if (event.clientY <= 50) { // Adjust the value (50px) as needed
+            header.classList.remove('hidden');
+        }
+    });
+});
+
+
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+
+    window.onload = function() {
+      const ServiceSection = document.getElementById('ServiceSection');
+      const container = document.querySelector('.container');
+      
+      setTimeout(() => {
+        ServiceSection.classList.add('visible'); 
+        container.classList.add('visible');  
+      }, 500);
+    };
+
+    document.querySelector('.nav-links li a[href="#ServiceSection"]').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('ServiceSection').scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+    //menu icon js
+    document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const navList = document.getElementById('nav-list');
+    const blurOverlay = document.getElementById('blur-overlay');
+
+    
+    menuIcon.addEventListener('click', function () {
+        navList.classList.toggle('active');
+        blurOverlay.classList.toggle('active');
+    });
+
+    
+    blurOverlay.addEventListener('click', function () {
+        navList.classList.remove('active');
+        blurOverlay.classList.remove('active');
+    });
+});
+  </script>
+
+  
+
+</body>
+</html>
