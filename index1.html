@@ -20,7 +20,7 @@
             <li><a href="#">HOME</a></li>
             <li><a href="work.html">WORK</a></li>
             <li><a href="#ServiceSection">SERVICES</a></li>
-            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#about-section">ABOUT</a></li>
             <li><a href="ContactUs.html">CONTACT</a></li>
           </ul>
 
@@ -29,7 +29,7 @@
     </header>
 
     <div class="icons">
-        <a href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+        <a href="https://www.instagram.com/yeole.in/"><i class="ri-instagram-line"></i></a>
         <a href="#"><i class="ri-youtube-line"></i></a>
         <a href="#"><i class="ri-mail-line"></i></a>
     </div>
@@ -79,6 +79,50 @@
       </div>
     </div>
   </section>
+
+ <!-- About Section -->
+
+ <section class="about-section" id="about-section">
+  <!-- About Us Header and Info -->
+  <div class="about-header">
+    <span class="space1">ABOUT</span>
+    <h1 class="space2" > us.</h1>
+    <p>We are a passionate team of creatives and developers dedicated to bringing your ideas to life. From stunning video edits to seamless web development, we craft solutions that inspire and deliver results.</p>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="stats-container">
+    <div class="stat">
+      <span class="stat-number" data-target="100">0</span>
+      <span class="stat-label">Finished Projects</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number" data-target="10">0</span>
+      <span class="stat-label">Team Members</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number" data-target="150">0</span>
+      <span class="stat-label">Happy Customers</span>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonials-container">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"The team transformed my vision into a stunning website. Their attention to detail and professionalism is unmatched!"</p>
+        <span class="client-name">- John Doe</span>
+      </div>
+      <div class="testimonial">
+        <p>"Amazing video editing services! They delivered exactly what I wanted, and on time. Highly recommend!"</p>
+        <span class="client-name">- Jane Smith</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -149,7 +193,49 @@
 });
   </script>
 
-  
+  <script>
+    // Animate Stats
+const stats = document.querySelectorAll('.stat-number');
+
+const animateStats = () => {
+  stats.forEach((stat) => {
+    const target = +stat.getAttribute('data-target');
+    const increment = target / 100; // Adjust speed here
+    let count = 0;
+
+    const updateNumber = () => {
+      if (count < target) {
+        count += increment;
+        stat.textContent = Math.ceil(count);
+        setTimeout(updateNumber, 20); // Adjust speed here
+      } else {
+        stat.textContent = `+${target}`;
+      }
+    };
+
+    updateNumber();
+  });
+};
+
+// Trigger animation when the stats section is in view
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateStats();
+        observer.disconnect();
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+observer.observe(document.querySelector('.stats-container'));
+  </script>
+
+<footer>
+  <p>Copyright © 2025 All rights reserved | YEOLE</p>
+</footer>
 
 </body>
 </html>

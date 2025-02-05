@@ -429,4 +429,118 @@ header.hidden {
   .box:nth-child(4) { animation-delay: 0.9s; }
   .box:nth-child(5) { animation-delay: 1s; }
   .box:nth-child(6) { animation-delay: 1.1s; }
+
+
+  /* About SECTION CSS */
+
+  /* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background:linear-gradient(245.69deg, #070707 10%, #121212 28.53%, #1d1c1c 75.52%);
+  color: #ffffff;
+}
+
+.about-section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* Stats Section */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+  margin: 20px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Testimonials Section */
+.testimonials-container {
+  margin-top: 50px;
+}
+
+.testimonials-container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: rgb(0, 0, 0); /* Glassy effect */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(255, 255, 255, 0.729);
+  max-width: 400px;
+  margin: 10px;
+  text-align: left;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.client-name {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #b8b8b8;
+}
+  
+
+footer {
+  background:linear-gradient(245.69deg, #070707 10%, #121212 28.53%, #1d1c1c 75.52%);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* Adjust the height as needed */
+}

@@ -1,15 +1,20 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: black; /* Black background */
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  padding-top: 70px; 
 }
 
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -21,33 +26,29 @@ body {
   box-shadow: 0 0 1px rgb(255, 255, 255); /* Glow effect */
   position: fixed;
   top: 30px;
-  left: 50%; 
-  transform: translateX(-50%); 
+  left: 50%;
+  transform: translateX(-50%);
   height: 60px;
   width: 900px;
   z-index: 1000;
   transition: top 0.3s;
 }
 
-
 .navbar.hidden {
-  top: -70px; 
+  top: -70px;
 }
 
-
 .logo img {
-  height: 100px; 
+  height: 100px;
   width: 200px;
   align-self: auto;
 }
-
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
 }
-
 
 .nav-links li a {
   text-decoration: none;
@@ -69,7 +70,7 @@ body {
   height: 0;
   background-color: black;
   border: 1px solid white;
-  border-radius: 50px; 
+  border-radius: 50px;
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.3s ease;
@@ -82,7 +83,6 @@ body {
   opacity: 1;
 }
 
-
 .nav-links li a::after {
   content: '';
   position: absolute;
@@ -91,7 +91,7 @@ body {
   width: 100%;
   height: 100%;
   border: 0.1px solid white;
-  border-radius: 50px; 
+  border-radius: 50px;
   transform: translate(-50%, -50%);
   opacity: 0;
   box-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white;
@@ -115,149 +115,9 @@ body {
   }
 }
 
-
-.navbar button {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 5px 15px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar button:hover {
-  background-color: white;
-  color: black;
-}
-
-  body {
-    background: linear-gradient(245.69deg, #070707 10%, #121212 28.53%, #1d1c1c 75.52%);
- 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 100vh;
-    margin: 0; 
-  }
-  
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Anton', sans-serif;
-    color: white;
-    text-align: center;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-transform: uppercase;
-}
-
-h1 {
-    font-size: 10rem;
-    margin: 0;
-}
-
-.outline {
-    color: transparent;
-    -webkit-text-stroke: 2px white;
-}
-
-.subtext {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-top: 20px;
-}
-
-.subtext p {
-    font-size: 1.2rem;
-    max-width: 300px;
-}
-
-.work_animation {
-  position: absolute;
-  left: 47%;
-  bottom: 20px;
-  z-index: 10;
-  width: 125px;
-  height: 125px;
-  cursor: pointer;
-  /* Adding animation here */
-  -webkit-animation: icon-bounce 0.8s ease-out infinite; 
-  animation: icon-bounce 0.8s ease-out infinite;  
-}
-
-/* Define the bounce animation */
-@keyframes icon-bounce {
-  0% {
-      transform: translateY(0); /* Initial position */
-  }
-  50% {
-      transform: translateY(-20px); /* Move up */
-  }
-  100% {
-      transform: translateY(0); /* Return to initial position */
-  }
-}
-
-@-webkit-keyframes icon-bounce {
-  0% {
-      -webkit-transform: translateY(0);
-  }
-  50% {
-      -webkit-transform: translateY(-20px);
-  }
-  100% {
-      -webkit-transform: translateY(0);
-  }
-}
-
-
-.circle-button {
-    width: 100px;
-    height: 100px;
-    border: 4px solid white;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 1.5rem;
-    padding-top: 17px;
-    cursor: pointer;
-    
-}
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-section {
+/* Background and Animation Styles */
+.background {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -265,43 +125,18 @@ section {
 
 
 
-/* Animation for CREATIVE (coming from the left) */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-transform: uppercase;
+  z-index: 10; /* Ensure hero content is above everything */
 }
 
-/* Animation for SPACE (coming from the right) */
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-
-/* Apply animations to the spans */
-.creative {
-  display: inline-block;
-  animation: slideInFromLeft 0.8s ease-out forwards;
-}
-
-.space {
-  display: inline-block;
-  animation: slideInFromRight 0.8s ease-out forwards;
-}
-
-/* Existing styles */
 h1 {
   font-size: 10rem;
   margin: 0;
@@ -316,10 +151,67 @@ h1 {
   -webkit-text-stroke: 2px white;
 }
 
+.creative {
+  display: inline-block;
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
 
+.space {
+  display: inline-block;
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
+.subtext {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.work_animation {
+  position: absolute;
+  left: 47%;
+  bottom: 20px;
+  z-index: 10;
+  width: 125px;
+  height: 125px;
+  cursor: pointer;
+  animation: icon-bounce 0.8s ease-out infinite;
+}
+
+@keyframes icon-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /* WORK SECTION CSS */
 

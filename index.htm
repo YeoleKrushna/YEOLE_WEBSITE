@@ -20,6 +20,23 @@
       <li><a href="ContactUs.html">CONTACT</a></li>
     </ul>
   </nav>
+  <body>
+    <section>
+      <div class="leaves">
+        <div class="set">
+          <div><img src="images/stone-01.png"></div>
+          <div><img src="images/stone-01.png"></div>
+          <div><img src="images/stone-01.png"></div>
+          <div><img src="images/stone-01.png"></div>
+          <div><img src="images/stone-01.png"></div>
+          <div><img src="images/stone-01.png"></div>
+          <div><img src="images/stone-01.png"></div>
+          <div><img src="images/stone-01.png"></div>
+        </div>
+      </div>
+      <img src="images/bg.jpg" class="bg">
+      <img src="images/moon-01.png" class="girl">
+      <img src="images/mountain-01.png" class="trees">
 
   <!-- Hero Section (Home Page) -->
   <section class="hero">
@@ -100,6 +117,16 @@
       e.preventDefault();
       document.getElementById('ServiceSection').scrollIntoView({ behavior: 'smooth' });
     });
+  </script>
+
+  <script>
+    // script.js
+    const moon = document.querySelector('.moon');
+    const stones = document.querySelector('.stones');
+
+    moon.addEventListener('animationend', () => {
+    stones.style.animation = 'liftStones 0.5s ease-in-out forwards';
+  });
   </script>
 
 </body>
