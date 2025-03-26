@@ -191,6 +191,22 @@
         blurOverlay.classList.remove('active');
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.getElementById('menu-icon');
+  const navList = document.querySelector('.nav-list');
+  const blurOverlay = document.querySelector('.blur-overlay');
+
+  menuIcon.addEventListener('click', function() {
+    navList.classList.toggle('active');
+    blurOverlay.classList.toggle('active');
+  });
+
+  blurOverlay.addEventListener('click', function() {
+    navList.classList.remove('active');
+    blurOverlay.classList.remove('active');
+  });
+});
   </script>
 
   <script>
